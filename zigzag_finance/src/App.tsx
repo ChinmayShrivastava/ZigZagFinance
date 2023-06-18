@@ -1,15 +1,15 @@
+import React, { useEffect, useState } from "react";
 import "./styles/Home.css";
 // Default styles that can be overridden by your app
 require("@solana/wallet-adapter-react-ui/styles.css");
 
 const Home = () => {
-  // Here's how to get the thirdweb SDK instance
-  // const sdk = useSDK();
-  // Here's how to get a nft collection
-  // const { data: program } = useProgram(
-  //   your_nft_collection_address,
-  //   "nft-collection"
-  // );
+
+  const [launchApp, setLaunchApp] = useState(false);
+
+  const handleLaunchApp = () => {
+    setLaunchApp(true);
+  };
 
   return (
     <>
@@ -19,9 +19,11 @@ const Home = () => {
           <div className="logo">
             Logo
           </div>
-          <div className="nav-link">
+          { !launchApp ? 
+          <div className="nav-link" onClick={handleLaunchApp}>
             <a href="#">Home</a>
           </div>
+          : null }
         </div>
       </div>
 
