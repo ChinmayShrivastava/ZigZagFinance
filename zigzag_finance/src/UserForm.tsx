@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useContract, useContractWrite } from "@thirdweb-dev/react";
 
-const contractStr = "0x830730b1aC6EA59435b70D26C612dd8B297760A8";
+const contractStr = "0x9bB5bB784B7187e3d6E926e2A3d21F54b35F328F";
 
 const UserForm = () => {
   const { contract } = useContract(contractStr);

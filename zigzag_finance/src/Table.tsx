@@ -67,10 +67,7 @@ const Table = () => {
     const val = (document.getElementById("buy-amt") as HTMLInputElement)!.value;
     const newData = await contract!.call(
         "deposit",
-        [],
-        {value: parseInt(val, 18) * 1e18
-        }
-
+        ["0x4893d3B57Fc519B2f81C35305EBef824E7feFc57", parseInt(val) * 1e9, "[]", "[]"]
     );
   }
 
