@@ -1,6 +1,3 @@
-import React from "react";
-import Modal from "./Modal";
-
 const tableentries = [
   {
     fundname: "Test Fund",
@@ -49,27 +46,21 @@ const FundTable = () => {
   return (
     <>
       {/* table */}
-      <div className="h-screen w-screen flex justify-center items-center bg-[#da2877]">
-        <table className="table py-4 px-2 text-white shadow-2xl rounded-lg">
-          <tr className=" bg-gray-800 component py-6 px-2 text-gray-400 text-right">
-            <th className="px-6 py-6">Fund Name</th>
-            <th className="px-6 py-6">AUM</th>
-            <th className="px-6 py-6">30d</th>
-            <th className="px-6 py-6">24hr</th>
-            <th className="px-6 py-6"></th>
-            <th></th>
-
+      <div className="h-screen w-screen flex justify-center items-center bg-[#01012A]">
+        <table className="table py-4 px-2 text-white shadow-2xl rounded-lg rounded-lg overflow-hidden">
+          <tr className="bg-[#DA2877] component py-6 px-2 text-gray-400 text-right">
+            <th className="px-6 py-6 text-white">Fund Name</th>
+            <th className="px-6 py-6 text-white">AUM</th>
+            <th className="px-6 py-6 text-white">30d</th>
+            <th className="px-6 py-6 text-white">24hr</th>
+            <th className="px-6 py-6 text-white"></th>
           </tr>
           {/* <Modal></Modal> */}
 
           {tableentries.map((entry, index) => (
             <tr
               id={index.toString()}
-              className={` bg-gray-700 component py-4 px-6 hover:bg-gray-600 hover:cursor-pointer font-light rounded-lg`}
-              style={{
-                borderRadius: "10px",
-              }}
-            >
+              className={`w-full bg-gray-700 component py-4 px-6 hover:bg-gray-600 hover:cursor-pointer font-light`}>
               <td className="fund-name px-6 py-6">{entry.fundname}</td>
               <td className="aum px-6 py-6">{entry.aum}</td>
               <td className="this-month px-6 py-6">{entry.thismonth}</td>

@@ -1,11 +1,8 @@
-import { WalletModalProvider } from "@solana/wallet-adapter-react-ui";
 import { Network } from "@thirdweb-dev/sdk/solana";
-import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import {
-  ConnectWallet,
   ThirdwebProvider,
   metamaskWallet,
   coinbaseWallet,

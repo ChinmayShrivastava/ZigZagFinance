@@ -18,7 +18,7 @@ const Home = () => {
   let isManager = false;
 
   return (
-    <div className="bg-black w-screen h-screen box-border">
+    <div className="bg-[#01012A] w-screen h-screen box-border">
       <div className="w-screen flex justify-end" onClick={handleLaunchApp}>
         <ConnectWallet
           className={`mr-2 mt-2 nav-link py-5 px-4 bg-gradient-to-br from-pink-600 to-purple-500 text-white rounded-xl font-bold hover:-translate-y-1  transition-all`}
