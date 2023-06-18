@@ -85,12 +85,12 @@ const Table = () => {
       {/* table */}
 
       <div className="h-screen w-screen flex justify-center items-center flex-col bg-[#da2877]">
-        <table className="table py-4 px-2 text-white shadow-2xl rounded-lg">
+        <table className="table py-4 px-2 text-white shadow-2xl rounded-lg overflow-hidden">
           <tr className=" bg-gray-800 component py-6 px-2 text-gray-400 text-right">
-            <th className="px-6 py-6">Fund Owner</th>
-            <th className="px-6 py-6">Commission (%)</th>
-            <th className="px-6 py-6">Fund Name</th>
-            <th className="px-6 py-6">Exit Fee (%)</th>
+            <th className="px-6 py-6 text-white">Fund Owner</th>
+            <th className="px-6 py-6 text-white">Commission (%)</th>
+            <th className="px-6 py-6 text-white">Fund Name</th>
+            <th className="px-6 py-6 text-white">Exit Fee (%)</th>
             {/* <th className="px-6 py-6"></th> */}
             <th></th>
           </tr>
@@ -101,14 +101,16 @@ const Table = () => {
          <th className="px-6 py-6">{name.data}</th>
          <th className="px-6 py-6">{fee.data && parseInt(fee.data["_hex"], 16)}</th>
         </table>
-        <div className="buy-sell px-6 py-6 flex gap-2">
+        <div className="buy-sell px-6 py-6 flex gap-2 justify-self-right">
                 {/* <BuySell /> */}
-                <input id="buy-amt" type="number" placeholder="Amount"></input>
-                <button className="buy-button bg-blue-800 rounded-xl py-3 px-6 hover:bg-blue-700 transition-all" onClick={handleBuy}>
+                <input id="buy-amt" type="number" placeholder="Amount"
+                className="rounded-lg overflow-hidden focus:outline-none px-4 bg-opacity-50 bg-gray-800 py-2 text-white"
+                ></input>
+                <button className="text-white buy-button bg-[#00C56E] rounded-xl py-3 px-6 hover:bg-[#00E580] transition-all" onClick={handleBuy}>
                   Buy
                 </button>
 
-                <button className="sell-button bg-gray-500 hover:bg-orange-600 transition-all rounded-xl py-3 px-6" onClick={handleSell}>
+                <button className="text-white sell-button bg-[#FF0000] hover:bg-[#FF6797] transition-all rounded-xl py-3 px-6" onClick={handleSell}>
                   Sell
                 </button>
               </div>
