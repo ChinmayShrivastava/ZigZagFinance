@@ -5,7 +5,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import "./styles/globals.css";
+// import "./styles/globals.css";
 require("@solana/wallet-adapter-react-ui/styles.css");
 
 // Change the network to the one you want to use: "mainnet-beta", "testnet", "devnet", "localhost" or your own RPC endpoint
