@@ -1,11 +1,3 @@
-<<<<<<< Updated upstream
-=======
-import React, { useEffect } from "react";
-import Modal from "./Modal";
-
-import { useContractRead, useContract } from "@thirdweb-dev/react";
-
->>>>>>> Stashed changes
 const tableentries = [
   {
     fundname: "Test Fund",
