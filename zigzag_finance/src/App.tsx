@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import "./styles/Home.css";
+import LaunchApp from "./LaunchApp";
 // Default styles that can be overridden by your app
-require("@solana/wallet-adapter-react-ui/styles.css");
+// require("@solana/wallet-adapter-react-ui/styles.css");
 
 const Home = () => {
 
@@ -27,12 +28,14 @@ const Home = () => {
         </div>
       </div>
 
+      { launchApp ? <LaunchApp /> : 
       <div className="container">
         <div className="content">
           <h1>Buy and Sell NFTs</h1>
           <p>Woohoo</p>
         </div>
       </div>
+      }
 
     </>
 
