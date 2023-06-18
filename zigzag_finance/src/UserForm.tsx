@@ -1,27 +1,40 @@
-import { useState } from 'react';
+import { useEffect, useState } from "react";
+import { useContract, useContractWrite } from "@thirdweb-dev/react";
+
+const contractStr = "0x830730b1aC6EA59435b70D26C612dd8B297760A8";
 
 const UserForm = () => {
+  const { contract } = useContract(contractStr);
+  const { mutateAsync, isLoading, error } = useContractWrite(
+    contract,
+    "createVault"
+  );
 
-    // initiate a form
-    const [form, setForm] = useState({
-        vaultname: "",
-        denominationasset: "",
-        managementfee: "",
-        exitfee: ""
+  // initiate a form
+  const [form, setForm] = useState({
+    vaultname: "",
+    denominationasset: "",
+    managementfee: "",
+    exitfee: "",
+  });
+
+  // handle form entry changes
+  const handleChange = (e: any) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
     });
+  };
 
-    // handle form entry changes
-    const handleChange = (e: any) => {
-        setForm({
-            ...form,
-            [e.target.name]: e.target.value
-        });
-    }
+  const onSubmit = (e: any) => {
+    e.preventDefault();
+    console.log(form);
+  };
 
-    const onSubmit = (e: any) => {
-        e.preventDefault();
-        console.log(form);
-    }
+  // const { mutateAsyncT, isLoadingT, errorT     } = useContractWrite(
+  //     contract,
+  //     "setName",
+  //   );
 
     return (
         <div className="flex w-screen justify-center flex-column align-center h-screen items-center bg-[#01012A]">
