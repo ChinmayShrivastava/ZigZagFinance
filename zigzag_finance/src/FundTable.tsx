@@ -62,9 +62,10 @@ const FundTable = () => {
     <>
       {/* table */}
       <div className="h-screen w-screen flex justify-center items-center bg-[#01012A]">
-      <table className="table py-4 px-2 text-white shadow-2xl rounded-lg">
-        <tr className=" bg-gray-800 component py-6 px-2 text-gray-400 text-right">
+      <table className="table py-4 px-2 text-white shadow-2xl rounded-lg overflow-hidden">
+        <tr className="bg-[#DA2877] component py-6 px-2 text-white text-left">
           <th className="px-6 py-6">Fund Address</th>
+          <th className="px-6 py-6"></th>
         </tr>
         {/* <Modal></Modal> */}
 
@@ -77,6 +78,7 @@ const FundTable = () => {
                 borderRadius: "10px",
               }}
             >
+              <td className="px-10 text-white">{index+1}</td>
               <a href={`/fund/${entry}`}>
                 <td className="fund-name px-6 py-6">{entry}</td>
               </a>
