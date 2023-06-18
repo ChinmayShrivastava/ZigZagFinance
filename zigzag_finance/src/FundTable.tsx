@@ -1,4 +1,5 @@
 import React from "react";
+import Modal from "./Modal";
 
 const tableentries = [
   {
@@ -48,7 +49,7 @@ const FundTable = () => {
   return (
     <>
       {/* table */}
-      <div className="h-screen w-screen flex justify-center items-center bg-gray-900">
+      <div className="h-screen w-screen flex justify-center items-center bg-[#da2877]">
         <table className="table py-4 px-2 text-white shadow-2xl rounded-lg">
           <tr className=" bg-gray-800 component py-6 px-2 text-gray-400 text-right">
             <th className="px-6 py-6">Fund Name</th>
@@ -59,6 +60,7 @@ const FundTable = () => {
             <th></th>
 
           </tr>
+          {/* <Modal></Modal> */}
 
           {tableentries.map((entry, index) => (
             <tr
@@ -78,7 +80,7 @@ const FundTable = () => {
                   Buy
                 </button>
               
-                <button className="sell-button bg-orange-700 hover:bg-orange-600 transition-all rounded-xl py-3 px-6">Sell</button>
+                <button className="sell-button bg-gray-500 hover:bg-orange-600 transition-all rounded-xl py-3 px-6">Sell</button>
               </td>
             </tr>
           ))}

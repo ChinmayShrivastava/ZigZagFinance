@@ -24,7 +24,7 @@ const UserForm = () => {
     }
 
     return (
-        <div className="flex w-screen justify-center flex-column align-center h-screen items-center">
+        <div className="flex w-screen justify-center flex-column align-center h-screen items-center bg-violet-800">
             <form className="bg-gray-800 component text-gray-400 text-right" onSubmit={onSubmit}>
                 <table className="table py-4 px-2 text-white shadow-2xl">
                     <tr className='bg-gray-800 component py-6 px-2 text-gray-400 text-right'>
