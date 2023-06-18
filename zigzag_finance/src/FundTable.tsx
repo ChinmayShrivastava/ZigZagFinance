@@ -1,3 +1,8 @@
+import React, { useEffect } from "react";
+import Modal from "./Modal";
+
+import { useContractRead, useContract } from "@thirdweb-dev/react";
+
 const tableentries = [
   {
     fundname: "Test Fund",
